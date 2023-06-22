@@ -32,7 +32,7 @@ setHtml(
 
 function flattenObject(obj) {
   let flatObj = {};
-  for ([key, value] of Object.entries(obj)) {
+  for (let [key, value] of Object.entries(obj)) {
     if (typeof value === "object" && !Array.isArray(value)) {
       flatObj = { ...flatObj, ...flattenObject(value) };
     } else {
