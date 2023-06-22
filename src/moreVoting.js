@@ -12,7 +12,7 @@ function findMaxNumber(arr) {
   let counter = 0;
   let number = arr[0];
 
-// find number with more voting algo
+  // find number with more voting algo
   for (let n of arr) {
     if (number === n) {
       counter++;
@@ -24,16 +24,15 @@ function findMaxNumber(arr) {
       }
     }
   }
-  
-  // need to confirm found number is correct or not
+
+  // need to confirm, found number is correct or not
   let c = 0;
-  for(let n of arr){
-      if(number == n) c++;
+  for (let n of arr) {
+    if (number == n) c++;
   }
-  
-  if(c > arr.length/2) return number;
+
+  if (c > arr.length / 2) return number;
   return null;
-  
 }
 
 findMaxNumber([1, 1, 1, 3, 3]);
